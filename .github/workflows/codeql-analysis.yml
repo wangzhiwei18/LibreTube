@@ -62,9 +62,7 @@ jobs:
       # If this step fails, then you should remove it and run the build manually (see below)
       # --- 关键修改：替换掉 Autobuild ---
       - name: Build Java Code
-        run: |
-          chmod +x gradlew
-          ./gradlew clean build -x test
+        run: gradle build --no-daemon
 
       # ℹ️ Command-line programs to run using the OS shell.
       # 📚 https://git.io/JvXDl
